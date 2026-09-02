@@ -45,3 +45,15 @@ the two `href` links in `index.html` if you rename it).
 
 Edit the files, then either `git push` again (GitHub Pages redeploys
 automatically) or re-drag the folder onto Netlify Drop.
+
+## Updating the CV
+
+`assets/Jane_Oliver_CV.pdf` is generated from `cv-source/cv.html`, so the CV
+has an editable source in the repo. Edit the HTML, then re-export:
+
+```
+chromium --headless --no-pdf-header-footer \
+  --print-to-pdf=assets/Jane_Oliver_CV.pdf cv-source/cv.html
+```
+
+Any browser's Print → Save as PDF works too (letter size, no headers/footers).
